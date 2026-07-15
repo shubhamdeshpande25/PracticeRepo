@@ -5,8 +5,8 @@ SELECT
     region,
     product_category,
     SUM(sales_amount) AS total_sales,
-    COUNT(*) AS transaction_count
-    AVG(sales_amount) AS avg_sale
+    COUNT(*) AS transaction_count,
+    AVGG(sales_amount) AS avg_sale
 FROM sales_data
 WHERE order_date >= '2024-01-01'
 GROUP BY region, product_category
